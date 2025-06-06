@@ -1,0 +1,63 @@
+# Model arguments
+model_name_or_path: Qwen/Qwen2.5-3B-Instruct
+model_revision: main
+torch_dtype: bfloat16
+attn_implementation: flash_attention_2
+
+# Data training arguments
+dataset_name: openai/gsm8k
+dataset_config: main
+dataset_prompt_column: question
+system_prompt: "You are a helpful AI Assistant that provides well-reasoned and detailed responses. You first think about the reasoning process as an internal monologue and then provide the user with the answer. Respond in the following format: <think>\n...\n</think>\n<answer>\n...\n</answer>"
+
+# GRPO trainer config
+beta: 0.0
+bf16: true
+use_vllm: false
+do_eval: false
+
+pods_full_size: 64 # PODS n
+num_generations: 16 # PODS m
+gradient_accumulation_steps: 1
+per_device_eval_batch_size: 16
+per_device_train_batch_size: 16
+
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+hub_model_id: Qwen2.5-3B-oaigsm8k-GRPO
+hub_strategy: every_save
+learning_rate: 5.0e-06
+log_completions: true
+num_completions_to_print: 2
+log_level: info
+logging_first_step: true
+logging_steps: 1
+logging_strategy: steps
+lr_scheduler_type: constant
+# lr_scheduler_type: cosine
+max_prompt_length: 512
+max_completion_length: 1024
+max_steps: -1
+num_train_epochs: 1
+output_dir: data/GRPO-n64-m16-ga1
+overwrite_output_dir: true
+push_to_hub: false
+report_to:
+  - wandb
+  - tensorboard
+reward_funcs:
+  # - my_correct
+  # - my_format
+  # - my_xmlcount
+  - accuracy
+  - format
+  - tag_count
+reward_weights:
+  - 1.0
+  - 1.0
+  - 1.0
+save_strategy: "epoch"
+save_total_limit: 1
+seed: 42
+# warmup_ratio: 0.03

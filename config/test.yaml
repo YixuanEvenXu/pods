@@ -1,0 +1,12 @@
+base_model: "Qwen/Qwen2.5-3B-Instruct"
+run_name: "Instruct-GSM8K-16-16-Run1"
+datasets: 
+  - "amc23"
+  - "gsm8k"
+  - "math500"
+max_seq_length: 1024
+temperature: 0.9
+max_tokens: 512
+batch_size: 512
+sample_cnt: 5
+repeat_cnt: 5
