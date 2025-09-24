@@ -11,6 +11,19 @@ from datasets import load_dataset, Dataset, Features, Value, concatenate_dataset
 from transformers import AutoTokenizer
 
 tokenizer_name = "Qwen/Qwen2.5-3B-Instruct"
+
+def set_tokenizer_name(name: str) -> None:
+    """
+    Set the global tokenizer/model repo used by dataset builders.
+
+    The dataset mapping functions rely on `AutoTokenizer.from_pretrained(tokenizer_name)`
+    to obtain the appropriate chat template (e.g., Qwen vs LLaMA). This setter lets
+    entrypoints choose the active model family dynamically.
+    """
+    global tokenizer_name
+    if isinstance(name, str) and len(name) > 0:
+        tokenizer_name = name
+
 SYSTEM_PROMPT_BASE = \
 """
 An AI assistant is given a math problem and solves it step by step. The assistant first thinks about the reasoning process in the mind and then concludes the answer. The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, i.e., 
@@ -44,7 +57,7 @@ def extract_xml_answer(text: str) -> str:
 
 def extract_last_integer(text: str) -> str:
     # Extracts the last integer from the text
-    numbers = re.findall(r"\d+", text)
+    numbers = re.findall(r"[\d\.\,]+", text)
     if numbers:
         return numbers[-1]
     return "-1"
@@ -58,7 +71,7 @@ def format_score(text: str) -> float:
     pattern = r"<think>.*</think>[ \n]?<answer>.*</answer>"
     match = re.search(pattern, text, flags=re.DOTALL)
     if match:
-        return max(0.0, 0.1 - 0.001 * (len(text)- len(match.group(0))))
+        return max(0.0, 1 - 0.01 * (len(text)- len(match.group(0))))
     return 0.0
 
 def format_correct(text: str) -> bool:
@@ -244,7 +257,8 @@ def correctness_reward_func(completions, answer, **kwargs) -> list[float]:
 def format_reward_func(completions, answer, **kwargs) -> list[float]:
     # Format reward, 0.1 for correct format
     responses = [completion for completion in completions]
-    return [0 if answer_correct(r, a) else format_score(r) for r, a in zip(responses, answer)]
+    return [0.01 * format_score(r) for r, a in zip(responses, answer)]
+    # return [0 if answer_correct(r, a) else format_score(r) for r, a in zip(responses, answer)]
 
 def length_penalty_func(completion_mask, max_completion_length, **kwargs) -> list[float]:
     # Length penalty, 0.5 for completion length >= max_completion_length
@@ -254,16 +268,17 @@ def length_penalty_func(completion_mask, max_completion_length, **kwargs) -> lis
 def count_xml(text) -> float:
     count = 0.0
     if text.count("<think>") == 1:
-        count += 0.025
+        count += 0.25
     if text.count("</think>") == 1:
-        count += 0.025
+        count += 0.25
     if text.count("<answer>") == 1:
-        count += 0.025
+        count += 0.25
     if text.count("</answer>") == 1:
-        count += 0.025
+        count += 0.25
     return count
 
 def xmlcount_reward_func(completions, answer, **kwargs) -> list[float]:
-    # XML count reward, 0.025 for each XML tag
+    # XML count reward, 0.25 for each XML tag
     contents = [completion for completion in completions]
-    return [0 if answer_correct(r, a) else count_xml(r) for r, a in zip(contents, answer)]
+    return [0.01 * count_xml(r) for r, a in zip(contents, answer)]
+    # return [0 if answer_correct(r, a) else count_xml(r) for r, a in zip(contents, answer)]

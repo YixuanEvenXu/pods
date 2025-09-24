@@ -35,7 +35,9 @@ def main(cfg: DictConfig) -> None:
     model = FastLanguageModel.get_peft_model(model, **peft_args)
 
     # Load the datasets
-    from utils.data import get_questions
+    from utils.data import get_questions, set_tokenizer_name
+    # Ensure dataset builders use the right tokenizer/chat template
+    set_tokenizer_name(cfg.model.model_name)
     dataset_training = get_questions(cfg.rl.dataset, split = "train", 
                                      style = "instruct" if cfg.model.model_name[-8:] == "Instruct" else "base")
     # dataset_testing  = get_math8k_questions(split = "test")
@@ -92,9 +94,7 @@ def main(cfg: DictConfig) -> None:
         output_dir = f"checkpoints/{cfg.wandb.run_name}",
         **rlparams,
     )
-    reward_funcs = [correctness_reward_func]
-    if cfg.rl.dataset == "gsm8k":
-        reward_funcs = reward_funcs + [format_reward_func, xmlcount_reward_func]
+    reward_funcs = [correctness_reward_func, format_reward_func, xmlcount_reward_func]
     trainer = Trainer(
         model = model,
         processing_class = tokenizer,

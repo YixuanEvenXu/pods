@@ -115,6 +115,9 @@ def test_model(cfg: DictConfig, lora_name: str, merged_directory: str, results: 
             ["rm", "-rf", merged_directory],
             capture_output=True, check=True
         )
+    from .data import set_tokenizer_name
+    # Ensure dataset builders use the right tokenizer/chat template for evaluation
+    set_tokenizer_name(cfg.base_model)
     for dataset_name in cfg.datasets:
         print(f"Testing dataset {dataset_name}...")
         from .data import get_questions

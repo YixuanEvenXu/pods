@@ -15,14 +15,11 @@ from typing import Optional
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import sem
-import wandb                            #  pip install wandb
 
 # ╭─────────────────────────────╮
 # │  USER‑EDITABLE PARAMETERS   │
 # ╰─────────────────────────────╯
-setting_num = 5                          # choose 1‑5 below
-max_hours   = 6
-metric_key  = 'ans_acc'
+setting_num = 1
 
 # ───── Setting definitions ─────────────────────────────────
 if setting_num == 1:
@@ -39,6 +36,9 @@ if setting_num == 1:
     run_names = [f'Run{i}' for i in range(1, 11)]
     dataset_key = 'gsm8k'
     time_plot_wid = 9
+    max_hours   = 6
+    ckpt_int    = 0.5
+    metric_key  = 'ans_acc'
 
 elif setting_num == 2:
     exp_name = 'gsm8k_m_scaling'
@@ -53,6 +53,9 @@ elif setting_num == 2:
     run_names = [f'Run{i}' for i in range(1, 11)]
     dataset_key = 'gsm8k'
     time_plot_wid = 9
+    max_hours   = 6
+    ckpt_int    = 0.5
+    metric_key  = 'ans_acc'
 
 elif setting_num == 3:
     exp_name = 'gsm8k_main'
@@ -65,6 +68,9 @@ elif setting_num == 3:
     run_names = [f'Run{i}' for i in range(1, 11)]
     dataset_key = 'gsm8k'
     time_plot_wid = 5
+    max_hours   = 6
+    ckpt_int    = 0.5
+    metric_key  = 'ans_acc'
 
 elif setting_num == 4:
     exp_name = 'math_main'
@@ -77,8 +83,11 @@ elif setting_num == 4:
     run_names = [f'Run{i}' for i in range(1, 11)]
     dataset_key = 'math500'
     time_plot_wid = 5
+    max_hours   = 6
+    ckpt_int    = 0.5
+    metric_key  = 'ans_acc'
 
-else:
+elif setting_num == 5:
     exp_name = 'down_sampling_rule'
     settings = [
         'Instruct-GSM8K-512-64-16',
@@ -90,6 +99,24 @@ else:
     run_names = [f'Run{i}' for i in range(1, 11)]
     dataset_key = 'gsm8k'
     time_plot_wid = 8
+    max_hours   = 6
+    ckpt_int    = 0.5
+    metric_key  = 'ans_acc'
+
+elif setting_num == 6:
+    exp_name = 'llama_main'
+    settings = [
+        'Instruct-Llama-512-16-16-0.04',
+        'Instruct-Llama-512-64-16-0.04',
+    ]
+    tol_rainbow = ["#BB0011", "#1166CC"]
+    display_names = ['GRPO', 'GRPO‑PODS']
+    run_names = [f'Run{i}' for i in range(1, 11)]
+    dataset_key = 'gsm8k'
+    time_plot_wid = 5
+    max_hours   = 1.5
+    ckpt_int    = 1/6
+    metric_key  = 'both_acc'
 
 # ╭──────────────────────────────╮
 # │  File / colour prep          │
@@ -115,8 +142,7 @@ plt.rcParams.update({'lines.linewidth': 2, 'lines.markersize': 8,
 acc_curve   = defaultdict(lambda: defaultdict(list))
 len_curve   = defaultdict(lambda: defaultdict(list))
 step_counts = defaultdict(list)
-step_time_i = defaultdict(list)
-step_time_u = defaultdict(list)
+step_time   = defaultdict(list)
 
 # ╭─────────────────────────────╮
 # │  parse logs                 │
@@ -129,24 +155,26 @@ for setting in settings:
         cps=sorted(log,key=lambda k:int(k.split('-')[-1]))
         if not cps: continue
         for idx,cp in enumerate(cps):
-            t_hr=(idx+1)*0.5
+            t_hr=(idx+1)*ckpt_int
             if t_hr>max_hours: break
             block=log[cp].get(dataset_key,{})
             accs=block.get(metric_key,[])
             lens=block.get('lengths',[])
             if accs: acc_curve[setting][t_hr].append(np.mean(accs))
             if lens: len_curve[setting][t_hr].append(np.mean(lens))
-        idx6=min(len(cps)-1,int(max_hours/0.5)-1)
+        idx6=min(len(cps)-1,int(max_hours/ckpt_int)-1)
         steps=int(cps[idx6].split('-')[-1])
         step_counts[setting].append(steps)
-        tot=6*3600/steps
-        step_time_i[setting].append(0.4*tot)
-        step_time_u[setting].append(0.6*tot)
+        tot=max_hours*3600/steps
+        step_time[setting].append(tot)
 
 # ╭──────────────────────────────────────────────╮
 # │  Add base‑model anchor, keep original y‑axis │
 # ╰──────────────────────────────────────────────╯
-base_path = Path('results') / 'base.json'
+if setting_num == 6:
+    base_path = Path('results') / 'base-llama.json'
+else:
+    base_path = Path('results') / 'base-qwen.json'
 if base_path.exists():
     base_json = json.loads(base_path.read_text()).get(dataset_key, {})
     base_vals_acc = base_json.get(metric_key, [])
@@ -166,24 +194,8 @@ else:
 y_vals=[v*100 for s in settings for t,vlist in acc_curve[s].items() if t>0 for v in vlist]
 ymin,ymax=min(y_vals),max(y_vals); margin=0.01*(ymax-ymin)
 
-# ╭──────── plot 1  accuracy curve ───────╮
-plt.figure(figsize=(10,6))
-for s in settings:
-    lab=disp_map[s]; c=color_map[lab]
-    t=sorted(acc_curve[s]); y=[np.mean(acc_curve[s][ti])*100 for ti in t]
-    e=[sem(acc_curve[s][ti])*100 if len(acc_curve[s][ti])>1 else 0 for ti in t]
-    plt.plot(t,y,marker='o',color=c,label=lab)
-    plt.fill_between(t,np.array(y)-1.96*np.array(e),np.array(y)+1.96*np.array(e),
-                     color=c,alpha=0.25)
-plt.xlabel('Training Time on One L40S (hours)')
-plt.ylabel('Test Accuracy (%)')
-plt.ylim(ymin-margin,ymax+margin); plt.xlim(0,max_hours)
-plt.grid(alpha=0.3); plt.legend(); plt.tight_layout()
-plt.savefig(fig_root/f'{dataset_key}_{metric_key}.png',dpi=200)
-plt.close()
-
-# ╭──────── plot 2  completion‑length curve ─╮
-plt.figure(figsize=(18,6))
+# ╭──────── completion‑length curve ────────╮
+plt.figure(figsize=(18,4))
 for s in settings:
     lab=disp_map[s]; c=color_map[lab]
     t=sorted(len_curve[s]); y=[np.mean(len_curve[s][ti]) for ti in t]
@@ -192,37 +204,16 @@ for s in settings:
     plt.fill_between(t,np.array(y)-1.96*np.array(e),np.array(y)+1.96*np.array(e),
                      color=c,alpha=0.25)
 plt.xlabel('Training Time on One L40S (hours)')
-plt.ylabel('Average Completion Length')
+plt.ylabel('Average\nCompletion Length')
 plt.xlim(0,max_hours)
 plt.grid(alpha=0.3); plt.legend(); plt.tight_layout()
 plt.savefig(fig_root/'length_over_time.png',dpi=200)
 plt.savefig(fig_root/'length_over_time.pdf',dpi=200)
 plt.close()
 
-# ╭──────── plot 3  steps in 6 h bar ─────╮
-labels=[disp_map[s] for s in settings]; x=np.arange(len(labels))
-colors=[color_map[l] for l in labels]
-plt.figure(figsize=(10,6))
-y=[np.mean(step_counts[s]) for s in settings]
-yerr=[1.96*sem(step_counts[s]) if len(step_counts[s])>1 else 0 for s in settings]
-plt.bar(x,y,yerr=yerr,color=colors,alpha=0.85,capsize=5)
-plt.xticks(x,labels); plt.ylabel('Number of Steps (First 6h)')
-plt.title('Training Progress After 6h'); plt.tight_layout()
-plt.savefig(fig_root/'steps_in_6h.png',dpi=200); plt.close()
-
-# ╭──────── plot 4  stacked time bar ───────╮
-plt.figure(figsize=(10,6))
-inf=[np.mean(step_time_i[s]) for s in settings]
-upd=[np.mean(step_time_u[s]) for s in settings]
-plt.bar(x,inf,color=colors,label='Inference')
-plt.bar(x,upd,bottom=inf,color='grey',alpha=0.4,label='Policy update')
-plt.xticks(x,labels); plt.ylabel('Seconds per Training Step')
-plt.title('Average Time Per Step'); plt.legend(); plt.tight_layout()
-plt.savefig(fig_root/'time_per_step.png',dpi=200); plt.close()
-
-# ╭──────── plot 5  composite panel ────────╮
+# ╭──────── composite panel ────────╮
 ratio_l,ratio_r=18-time_plot_wid,time_plot_wid
-fig,(ax_l,ax_r)=plt.subplots(1,2,figsize=(18,6),dpi=100,
+fig,(ax_l,ax_r)=plt.subplots(1,2,figsize=(18,4),dpi=100,
     gridspec_kw={'width_ratios':[ratio_l,ratio_r],'wspace':0.1},
     constrained_layout=True)
 
@@ -240,9 +231,13 @@ ax_l.set_xlim(0,max_hours); ax_l.set_ylim(ymin-margin,ymax+margin)
 ax_l.grid(alpha=0.3); ax_l.legend(loc='best')
 
 # stacked time bar (right)
-ax_r.bar(x,[i+u for i,u in zip(inf,upd)],color=colors)
+x=np.arange(len(settings))
+times=[np.mean(step_time[s]) for s in settings]
+labels=[disp_map[s] for s in settings]; x=np.arange(len(labels))
+colors=[color_map[l] for l in labels]
+ax_r.bar(x,times,color=colors)
 ax_r.set_xticks(x); ax_r.set_xticklabels(labels)
-ax_r.set_xlabel('Algorithm'); ax_r.set_ylabel('Seconds per Training Step')
+ax_r.set_xlabel('Algorithm'); ax_r.set_ylabel('Seconds per\nTraining Step')
 
 fig.savefig(fig_root/'main.png',dpi=200)
 fig.savefig(fig_root/'main.pdf'); plt.close(fig)

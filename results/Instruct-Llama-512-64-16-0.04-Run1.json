@@ -1,0 +1,830 @@
+{
+    "checkpoint-51": {
+        "gsm8k": {
+            "ans_acc": [
+                0.35329795299469297,
+                0.36087945413191813,
+                0.3661865049279757,
+                0.35405610310841545,
+                0.33965125094768767
+            ],
+            "for_acc": [
+                0.3237300985595148,
+                0.3252463987869598,
+                0.31842304776345715,
+                0.35178165276724793,
+                0.3017437452615618
+            ],
+            "both_acc": [
+                0.155420773313116,
+                0.17361637604245642,
+                0.1728582259287339,
+                0.1683093252463988,
+                0.14480667172100076
+            ],
+            "lengths": [
+                220.56482183472326,
+                220.32752084912812,
+                224.36921910538285,
+                221.7308567096285,
+                222.0644427596664
+            ],
+            "examples": [
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJanet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "18",
+                    "completion": "<think>\nThis problem can be broken down into several steps. First, we need to determine how many eggs Janet lays each day, then calculate how many she eats and bakes, then find out how many eggs are left for the farmers' market. Lastly, we multiply the number of eggs left by the selling price. However, the problem does not specify the number of days. We must assume a day, and then the result can be generalized. For the purpose of calculation, let's assume a day.\n\n\nCalculating the number of eggs laid per day: 16 eggs per day.\nCalculating the number of eggs eaten for breakfast: 3 per day.\nCalculating the number of eggs used for baking muffins: 4 per day.\n\n\nNow, subtracting the number of eggs eaten and used from the number of eggs laid gives us the number of eggs left for the farmers' market. The total number of eggs left is then 16 - 3 - 4 = 9. \n\nWe will then multiply this number by the selling price to find Janet's earnings.\n\nMultiplying 9 eggs by the $2 selling price per egg results in 18 dollars.\n\n\n<answer>\n$18",
+                    "correct": true,
+                    "format_correct": false
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nA robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "3",
+                    "completion": "<think>\nI need to understand the ratio of blue fiber to white fiber. It is given that the number of bolts of blue fiber is twice the number of bolts of white fiber. So, if I denote the number of bolts of white fiber as x, the number of bolts of blue fiber is 2x.\n\nThe problem states that the total number of bolts is the sum of blue and white fibers, which is 2x + x = 3x. \n\nHowever, I am asked for the total number of bolts, not the variable x. We need an actual number.\n\n</think>\n<answer>\nTo find the actual number, I need a specific value for x. Unfortunately, the problem doesn't provide one. To provide a complete answer, I would need more information about the number of bolts of white fiber, x.",
+                    "correct": false,
+                    "format_correct": false
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJosh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "70000",
+                    "completion": "<think>\nThe problem states that the repairs increased the value of the house by 150%. To find the increased value, we need to first find 150% of the original price, then add that to the original price. If the house's new value is x, then x = original price + 150% of original price. We know the original price plus the repair cost, so 50,000 + 80,000 = $130,000 is the new price. \n\nTo find the original value of the house, we'll divide the new price by 3 (since we are adding 150% of the original value to the original value). \n\nNew price = 130,000\nOriginal price = New price / 3\nOriginal price = 130,000 / 3\nOriginal price = 43,333\n\nThe increase in value after repairs is then $43,333 + 80,000 =  $123,333. To find the profit, we'll subtract the original price of $80,000 from this.\n\nProfit = Increased value - Original price\nProfit = $123,333 - $80,000 \nProfit = $43,333 \n\n<answer>\n$43,333",
+                    "correct": false,
+                    "format_correct": false
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJames decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "540",
+                    "completion": "<think>\nI will first calculate the number of meters James runs in one week by multiplying the duration of one sprint by the number of times per week. Since he runs three sprints in a week, he will do this three times a week. This can be thought of as 3 x 60 meters = meters for two sprints, but I need to multiply this by 3 to account for three sets of sprints each week, giving 3 * (3 * 60). However, since there are 7 days in a week and he runs three sprints a week, this can also be thought of as 7 days * 3 sprints * 60 meters.\n\n</think>\n<answer>\n3 * 3 * 60 = 540 meters and 7 * 3 * 60 = 1260 meters and these are different answers hence I will choose 3 * 3 * 60 = 540\n</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nEvery day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "20",
+                    "completion": "<think>\nI have checked my math to make sure it's correct. The problem is asking for the amount of feed needed for one final meal and there is already 15 + 25 cups given in the morning and afternoon. However, I need to determine if the question is asking for a morning and afternoon total or if the problem is asking for the morning and afternoon total for all 20 chickens, and then asking for the extra for the final meal. I decided to approach it as a per chicken amount and get the final answer as the number of chickens multiplied by the per chicken amount (3 cups per chicken), then subtract the amount already given in the two previous meal times two.\n\n</think>\n<answer>\nTo find out the amount of feed for one chicken, we divide the total feed given in the morning and afternoon by the total number of chickens: \n\n(15 + 25) / 20 = 40 / 20 = 2 cups per chicken\n\nNow, we need to add 3 cups for the afternoon meal for all the chickens. \n\n3 cups * 20 chickens = 60 total for all chickens.\n\nSince the morning and afternoon already contains a 40 cups and that has been calculated per chicken then using the total per chicken for 40, we were asked for the extra. \n\nSo the answer to the problem is the morning + afternoon minus 40, for the remaining amount for a single chicken.\n\n40 * 20 is the same as 40 x 20, which is 800 total cups needed for the 20 chickens. \nWe are looking for the last meal. To figure out the last meal being 3 per chicken times 20 minus 60.\n\n</answer>\n8",
+                    "correct": false,
+                    "format_correct": false
+                }
+            ]
+        }
+    },
+    "checkpoint-101": {
+        "gsm8k": {
+            "ans_acc": [
+                0.4139499620924943,
+                0.43896891584533737,
+                0.41470811220621684,
+                0.4564063684609553,
+                0.4230477634571645
+            ],
+            "for_acc": [
+                0.6345716451857468,
+                0.6315390447308568,
+                0.6467020470053071,
+                0.643669446550417,
+                0.6072782410917361
+            ],
+            "both_acc": [
+                0.3115996967399545,
+                0.332827899924185,
+                0.31766489764973466,
+                0.3419257012888552,
+                0.31311599696739956
+            ],
+            "lengths": [
+                208.89992418498863,
+                203.14329037149355,
+                205.87490523123577,
+                203.14253222137984,
+                204.77862016679302
+            ],
+            "examples": [
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJanet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "18",
+                    "completion": "<think>\nTo find the daily income from selling duck eggs, I need to first calculate the total number of eggs laid per day and then subtract the eggs consumed and baked for friends. Janet lays 16 eggs, eats 3 for breakfast, uses 4 for baking, so the remainder is 16 - 3 - 4 = 9 eggs. \n\n</think>\n<answer>\n9</answer>",
+                    "correct": false,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nA robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "3",
+                    "completion": "<think>\nThe problem states that a robe requires twice as much blue fiber as white fiber, not the other way around.\n</think>\n<answer>\n3\n</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJosh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "70000",
+                    "completion": "<think>\nTo find Josh's profit, I need to first calculate the increased value of the house after the repairs, which can be done by adding the cost of repairs ($50,000) to the original price ($80,000). However, since the value increased by 150%, I should multiply the original price by 1.5 (100% + 50%) to get the new value of the house. Additionally, I should subtract the cost of repairs from the new value to find the revenue from selling the house, then subtract the cost of buying the house to get the profit. \n</think>\n<answer>\nThe new value of the house after the repairs = $80,000 * 1.5 = $120,000\nRevenue from selling the house = $120,000 - $50,000 = $70,000\nProfit = $70,000 - $80,000 = -$10,000\nThe answer is a loss of $10,000.",
+                    "correct": false,
+                    "format_correct": false
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJames decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "540",
+                    "completion": "<think>Since James runs 3 sprints 3 times a week, we need to calculate how many sprints he runs in total in a week. He runs 3 sprints 3 times a week, so 3 x 3 = 9 sprints in a week.\n\n</think>\n<answer>9</answer>",
+                    "correct": false,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nEvery day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "20",
+                    "completion": "<think>\nThis problem is about finding out the total amount of feed Wendi gave to the chickens in the morning and afternoon. To find the total amount, we need to add the feed given in the morning and afternoon meals.\nAdd the morning amount to the afternoon amount to find the amount of feed given in one day.\nTotal morning and afternoon amount = 15 cups + 25 cups = 40 cups. \nAs the feed is given in three meals, so there is one more meal left to find out. \nSo, we need to find out how many cups of feed are required per chicken in the morning and afternoon.\nThen multiply that with 20 chickens to get the final meal amount.\n</think>\n<answer>\n40 cups / 3 = 13.33 cups per meal. \nNow, multiply the amount of feed needed per chicken in one meal with 20 chickens to find out how many cups in the final meal.\n13.33 * 20 = 266.6 cups.",
+                    "correct": false,
+                    "format_correct": false
+                }
+            ]
+        }
+    },
+    "checkpoint-151": {
+        "gsm8k": {
+            "ans_acc": [
+                0.4746019711902957,
+                0.45489006823351025,
+                0.47081122062168307,
+                0.4586808188021228,
+                0.4564063684609553
+            ],
+            "for_acc": [
+                0.8847611827141774,
+                0.8946171341925702,
+                0.9029567854435178,
+                0.8877937831690674,
+                0.8984078847611827
+            ],
+            "both_acc": [
+                0.4495830174374526,
+                0.43442001516300227,
+                0.4518574677786202,
+                0.4306292645943897,
+                0.43214556482183475
+            ],
+            "lengths": [
+                189.37225170583775,
+                188.5996967399545,
+                189.1683093252464,
+                188.4040940106141,
+                190.52236542835482
+            ],
+            "examples": [
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJanet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "18",
+                    "completion": "<think>\nThe problem asked for the amount Janet makes at the farmers' market, but first, we need to find out how many eggs she has left from the 16 laid per day after her morning consumption and that she bakes and does not sell. \n\nJanet eats 3 eggs for breakfast and 4 for baking. So, that is 7 eggs in total and 16 - 7 = 9 eggs. \n\nJanet sells the 9 leftover eggs for $2 each. 9 * 2 = 18. The answer of 9 is not 18 though.\n\nThe issue here is that baking four eggs with Janet would be more than one egg effectively baking more than four but four would be in a total and baking four is less than 16.\n\nLet's correct her baking situation, replace 16 with 17 (because if you bake four then you effectively bake more than four because of 17-4). 17-7= 10 - and that is the proper amount of leftover eggs.\n\n10 * 2 is 20. Because she sells these eggs for $2. Janet now sells now 10 eggs per day but I made an error.  How much does she make?\n\nI now checked again and the solution is simple as it should have been in the first instance but a correction was made to it. Thus 10 * 2 = 20.",
+                    "correct": false,
+                    "format_correct": false
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nA robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "3",
+                    "completion": "<think>\nSince it takes 2 bolts of blue fiber and half that much white fiber, we can assume 'half' to be the same as 1/2. So the total amount of white fiber is 2 * (1/2) = 1 bolt. To find the total number of bolts, we add the blue and white fibers together: 2 (blue) + 1 (white) = 3.\n\n</think>\n<answer>\n3</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJosh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "70000",
+                    "completion": "<think>\nTo calculate Josh's profit, we need to calculate the original value of the house after repairs, and then subtract the cost of the house and repairs from it.  The problem states that the repairs increased the value by 150%.  A 150% increase means that the value is 1 + 1.50 = 2.5 times the original value.  Then we can calculate the value of the house after repairs by multiplying 80,000 by 2.5 to get the new value of the house.  After that we subtract the cost of the repairs and Josh's investment to get the profit.\n\n</think>\n<answer>\n$200,000</answer>",
+                    "correct": false,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJames decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "540",
+                    "completion": "<think>\nThis is a simple multiplication problem as James runs the same distance each sprint, and he does this for the same number of times each week.  There are 7 days in a week and he runs 3 sprints a week.  A sprint is a short, repeated turn or dash where James will run 60 meters.\n\n</think>\n<answer>\nTo find the total meters James runs in a week, I will multiply the number of sprints (3) by the number of times a week he does this (3 times), then multiply the result by the distance of each sprint (60 meters). That is 3 * 3 * 60 = 540 meters. \n\n</answer>",
+                    "correct": false,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nEvery day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "20",
+                    "completion": "<think>\nTo determine the number of cups of feed needed for the final meal, we need to first find the total amount of feed given to the chickens in the morning and afternoon, then subtract that total from the overall daily amount. In the morning, Wendi gave 15 cups, and in the afternoon, she gave 25 cups. Since she feeds each of the 20 chickens 3 cups each time, we can calculate the total cups given out so far by finding 2/3 of the total daily feed (since there are 3 feedings), which is 2 * 3 = 6 feedings. Multiply this 6 by the number of chickens to get the total cups, 6 * 20, to get 120 cups. To find the amount needed for the final meal, we subtract 120 cups from the daily amount of feed: 15 + 25 = 40 cups total for the day. That is 40 / 3 feedings. Multiply by 20. So we need 40 / 3 * 20 cups.\n</think>\n<answer>\n20",
+                    "correct": true,
+                    "format_correct": false
+                }
+            ]
+        }
+    },
+    "checkpoint-211": {
+        "gsm8k": {
+            "ans_acc": [
+                0.5291887793783169,
+                0.533737680060652,
+                0.533737680060652,
+                0.5079605761940864,
+                0.5223654283548143
+            ],
+            "for_acc": [
+                0.9370735405610311,
+                0.9294920394238059,
+                0.9378316906747536,
+                0.9378316906747536,
+                0.9438968915845337
+            ],
+            "both_acc": [
+                0.510235026535254,
+                0.5140257771038665,
+                0.514783927217589,
+                0.49052312357846856,
+                0.5109931766489765
+            ],
+            "lengths": [
+                185.51402577710385,
+                182.37831690674753,
+                182.6027293404094,
+                188.37604245640637,
+                185.95451099317665
+            ],
+            "examples": [
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJanet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "18",
+                    "completion": "<think>\nTo find the daily income from selling duck eggs, I first need to calculate the total number of eggs laid per day and then subtract the eggs consumed and baked for friends. Janet lays 16 eggs per day, eats 3 for breakfast, and bakes 4 for her friends. So, 16 (eggs laid) - 3 (eggs eaten for breakfast) - 4 (eggs baked for friends) = 9 eggs left to sell. \n\nSince Janet sells the eggs for $2 each, I will multiply the number of eggs left (9) by the selling price per egg ($2) to get the total daily income. \n\nLet's now perform this calculation to confirm my answer.</think>\n<answer>\n18</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nA robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "3",
+                    "completion": "<think>\nSince the robe takes half as much white fiber as blue fiber, the amount of white fiber is half of the blue fiber. If 'b' represents the number of bolts of blue fiber, then the number of bolts of white fiber is b/2. The total number of bolts is the sum of blue and white, which is b + b/2. To add these, I'll add the same value 1.5 times (since b + b/2 = 1.5b). Combining these, the total is 1.5b. To decide the answer, I need a value for b. This problem does not provide one, so I'll choose a number for 'b'. Let's assume 'b' is 2. 2 bolts of blue fiber and half of that, or 1 bolt of white fiber, make a total of 3 bolts.\n\n</think>\n<answer>3</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJosh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "70000",
+                    "completion": "<think>\nTo find Josh's profit, I need to first calculate the value of the house after the repairs. Since the repairs increased the value by 150%, I need to calculate 150% of the original cost and then add it to the cost. Then I will subtract the original cost from the new value to get the profit.\n</think>\n<answer>\n$70,000\n</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJames decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "540",
+                    "completion": "<think>Since James runs 3 sprints 3 times a week, and each sprint is 60 meters, I need to calculate the total distance he runs in a week by first finding out how many sprints he does in a week. \nHe runs 3 sprints per session, and he does this 3 times a week, so he does 3 * 3 = 9 sprints a week.\n\nNext, I need to multiply the total number of sprints per week by the distance of each sprint, which is 60 meters. So, 9 sprints per week times 60 meters per sprint is 60 * 9 = 540 meters a week.\n\nI'm confident with this calculation.\n</think>\n<(answer>540</answer>",
+                    "correct": true,
+                    "format_correct": false
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nEvery day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "20",
+                    "completion": "<think>\nThis problem is about finding out the total amount of feed Wendi gave to the chickens in the morning and afternoon. To find the total amount, we add the morning amount and the afternoon amount. Then, we can find out how many cups of feed Wendi gives to each chicken and multiply that by the number of chickens to find the total amount needed for the final meal.\nFirst, we add 15 cups from the morning and 25 cups from the afternoon to find the total feed given so far:\n15 + 25 = 40 cups.\nThen, we divide the total amount of feed so far by the number of chickens to find out how many chicken feed each chicken gets:\n40 cups / 20 chickens = 2 cups.\nNow we can multiply 2 cups by the number of chickens to find the amount of feed Wendi needs to give:\n2 cups * 20 chickens = 40 cups.\n</think>\n<answer>\n40</answer>",
+                    "correct": false,
+                    "format_correct": true
+                }
+            ]
+        }
+    },
+    "checkpoint-268": {
+        "gsm8k": {
+            "ans_acc": [
+                0.55420773313116,
+                0.5799848369977255,
+                0.5739196360879454,
+                0.5564821834723275,
+                0.5655799848369977
+            ],
+            "for_acc": [
+                0.9325246398786959,
+                0.9431387414708112,
+                0.9408642911296436,
+                0.9401061410159212,
+                0.9401061410159212
+            ],
+            "both_acc": [
+                0.5322213798332069,
+                0.5655799848369977,
+                0.5504169825625473,
+                0.5344958301743745,
+                0.5458680818802123
+            ],
+            "lengths": [
+                188.52918877937833,
+                186.1349507202426,
+                187.85670962850645,
+                186.00606520090977,
+                185.3062926459439
+            ],
+            "examples": [
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJanet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "18",
+                    "completion": "<think>\nFirst, we need to calculate the total number of eggs laid per day. Since Janet's ducks lay 16 eggs per day, but she eats 3 for breakfast and bakes 4 with her friends, we subtract these from the total: 16 - 3 - 4 = 9. Since she sells the remainder at the farmers' market for $2 per egg, we multiply the number of eggs sold (9) by the price per egg ($2): 9 * 2 = 18. We decide to calculate daily earnings. \n</think>\n<answer>\n18</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nA robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "3",
+                    "completion": "<think>\nSince it takes 2 bolts of blue fiber and half that much white fiber, we can assume 'half' to be the same as 1/2. So the total amount of white fiber is 2 * (1/2) = 1 bolt. To get the total number of bolts, we need to add blue and white fiber bolts together, 2 + 1 = 3 bolts in total</think>\n<answer>3</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJosh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "70000",
+                    "completion": "<think>\nTo calculate Josh's profit, we need to calculate the original value of the house after repairs, and then subtract the cost of the house and repairs from it.  The problem states that the repairs increased the value by 150%.  A 150% increase means that the value of the house after repairs is 250% of the original value (100% + 150%).  We can then subtract the cost of the house and repairs from this value to calculate the profit.  First, we must convert $80,000 to 100% of the value, which is 100% * 80,000 = 80,000 dollars.  He spent 25% of value here, 50,000 / 0.25 = 200,000.  Next, the value after the repairs is 3 * 80,000 = 240,000 dollars, since the value was 2.5 * the original value.  Then we subtract the $200,000 repair cost and the $80,000 purchase price to find the profit: 240,000 - 200,000 - 80,000 = ($240,000 - $80,000 - $80,000 = $80,000). Since there was an increase of 150%, Josh spent $200,000 to increase the value by $80,000.\n</think>\n<answer>\n$80,000</answer>",
+                    "correct": false,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJames decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "540",
+                    "completion": "<think>\nTo find the total meters James runs a week, we need to first calculate the total distance he runs in a day, then multiply that by 3 (the number of days he runs per week). Since he runs 3 sprints per day, we can multiply 3 sprints by the distance he runs per sprint. The distance per sprint is 60 meters, so the total distance per day is 3 x 60 = 180 meters. Then, we multiply 180 meters by 3 days to get a weekly total. 180 x 3 = 540.\n\n</think>\n<answer>\n540</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nEvery day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "20",
+                    "completion": "<think>\nTo determine the number of cups of feed needed for the final meal, we need to first find the total amount of feed given to the chickens in the morning and afternoon, then subtract that total from the overall daily amount. In the morning, Wendi gave 15 cups, and in the afternoon, she gave 25 cups. This makes a total of 15 + 25 = 40 cups given so far.  Since she gives 3 meals of this feed, that is 40/3 = 13.333 cups per meal. Wendi has 20 chickens, so she must divide the current total amount of 40 cups by 20 eggs, but the chickens need 3 cups per meal. Since 40 cups divided by 20 chickens is 2 cups of feed per chicken, and the chickens need 3 cups instead, we still need 3 - 2 = 1 cup per chicken. \n\nWe need 20 chickens * 1 cup = 20 cups of chicken feed. Since we started with 40 cups and used 20, that would make 40 -20 = 20. However, that is incorrect, we know that they did not finish their meals, so they still need more. The amount of feed they needed is 20, and they have not finished their last meal yet, so we have to add back in, 3 to account for the missing meal, 20 + 3 = 23 cups of feed will be needed to finish the final meal.\n\n</think>\n<answer>\n23</answer>",
+                    "correct": false,
+                    "format_correct": true
+                }
+            ]
+        }
+    },
+    "checkpoint-330": {
+        "gsm8k": {
+            "ans_acc": [
+                0.5868081880212282,
+                0.5617892342683851,
+                0.5663381349507203,
+                0.5852918877937832,
+                0.5678544351781653
+            ],
+            "for_acc": [
+                0.956027293404094,
+                0.9476876421531463,
+                0.9446550416982562,
+                0.9499620924943138,
+                0.9567854435178166
+            ],
+            "both_acc": [
+                0.577710386656558,
+                0.5496588324488249,
+                0.5534495830174374,
+                0.5739196360879454,
+                0.558756633813495
+            ],
+            "lengths": [
+                188.96512509476875,
+                190.56482183472326,
+                189.39347990902198,
+                186.5784685367703,
+                187.97801364670204
+            ],
+            "examples": [
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJanet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "18",
+                    "completion": "<think>\nTo find the daily income from selling duck eggs, I first need to calculate the total number of eggs laid per day and then subtract the eggs consumed and baked for friends. Janet lays 16 eggs per day, eats 3 for breakfast, and bakes 4 for her friends, which adds up to 16 - 3 - 4 = 9 eggs per day left. Since she sells the remaining eggs at $2 each, I will multiply the number of eggs left by the selling price to get the total income.</think>\n<answer>\n$18</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nA robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "3",
+                    "completion": "<think>\nSince the robe takes half as much white fiber as blue fiber, the amount of white fiber is half of the blue fiber. If 'b' represents the number of bolts of blue fiber, then the number of bolts of white fiber is b/2. The total number of bolts is the sum of blue and white fiber, which is b + b/2. \n\nWe need to simplify this expression to find the total number of bolts. To do so, we can multiply both sides by 2 to eliminate the fraction, which gives us 2b + b = 3b. Now that we know it takes 3 bolts to make a robe, we are asked to find this total in terms of bolts.\n\n</think>\n<answer>\n3</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJosh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "70000",
+                    "completion": "<think>\nTo find Josh's profit, I need to first calculate the value of the house after the repairs. Since the repairs increased the value by 150%, I need to calculate 150% of the original cost and then add it to the cost. Then I will subtract the original cost to find the new value, and finally subtract the original cost and the repair cost to find Josh's profit. \nLet x be the value of the house before repairs. 150% of the original cost is 1.5x.  Therefore, the value after repairs is 2.5x, since this is the original cost plus 150% of it. \n\nI have information suggesting the value after repairs (new value) is $240,000.  Then 2.5x = 240,000, so x = 96,000.\n\nThen Josh's cost is $130,000.  Now I can find his profit by subtracting his cost from the value: 240,000 - 130,000 = 110,000.\n\n</think>\n<answer>\n110,000</answer>",
+                    "correct": false,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJames decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "540",
+                    "completion": "<think>\nTo find the total number of meters James runs in a week, I need to calculate how many meters he runs each week. He runs 3 sprints 3 times a week, and each sprint is 60 meters. \n\nFirst, multiply the number of sprints per week by the number of meters per sprint, then multiply the result by the number of weeks per week. (3 sprints/day * 3 days * 60 meters * 7 days)\n\n</think>\n<answer>\n3 * 3 * 60 * 7 = 1260</answer>",
+                    "correct": false,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nEvery day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "20",
+                    "completion": "<think>\nThis problem is about finding out the total amount of feed Wendi gave to the chickens in the morning and afternoon.  To find out how much she needs for the final meal of the day, we have to subtract the total cups she has given out already from the total amount she needs to give the chickens 3 meals worth of food. Since Wendi feeds her flock 20 chickens, 3 cups each day she needs a total of 20 * 3 = 60 cups of feed per day.  In the morning, she gives 15 cups and in the afternoon another 25, for a total of 15 + 25 = 40 cups of feed already given. Since Wendi needs 60 cups of feed total each day and 40 cups have already been given, that means she only needs to give out 60 - 40 = 20 cups of feed for the final meal of the day to Wendi's chickens.\n</think>\n<answer>\n20</answer>",
+                    "correct": true,
+                    "format_correct": true
+                }
+            ]
+        }
+    },
+    "checkpoint-389": {
+        "gsm8k": {
+            "ans_acc": [
+                0.5807429871114481,
+                0.5830174374526156,
+                0.5815011372251706,
+                0.5686125852918877,
+                0.5974222896133434
+            ],
+            "for_acc": [
+                0.9385898407884761,
+                0.9347990902198635,
+                0.9363153904473086,
+                0.9325246398786959,
+                0.9347990902198635
+            ],
+            "both_acc": [
+                0.5693707354056103,
+                0.5625473843821076,
+                0.5678544351781653,
+                0.55420773313116,
+                0.5807429871114481
+            ],
+            "lengths": [
+                195.75132676269902,
+                193.57012888551932,
+                193.2092494313874,
+                197.38968915845336,
+                192.39499620924943
+            ],
+            "examples": [
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJanet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "18",
+                    "completion": "<think>\nFirst, let's calculate how many eggs are left after Janet eats three eggs for breakfast and bakes four eggs for her friends. \nTotal eggs laid in a day = 16\nEggs eaten for breakfast = 3\nEggs baked for friends = 4\nRemaining eggs = Total eggs - (Eggs eaten for breakfast + Eggs baked for friends) \n= 16 - (3 + 4)\n= 16 - 7\n= 9\n\nNext, we need to multiply the remaining eggs by the amount she sells each egg for. \nNumber of eggs sold = 9 \nPrice per egg = $2 \nTotal money made per day = Number of eggs sold * Price per egg \n= 9 * $2\n= $18\n\n</think>\n<answer>\n$18</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nA robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "3",
+                    "completion": "<think>\nSince it takes 2 bolts of blue fiber and half that much white fiber, we can assume 'half' actually means the same amount as the blue fiber. So the problem might be a trick or the wording in blue might imply more than a literal half. If that is the case, then it actually takes 2 bolts of blue fiber and 1 bolt of white fiber. If it does indeed take half the blue, one might initially conclude that it takes 1 bolt of blue and 1 bolt of white fiber, totaling 2 bolts. However, without a clear direction of order (more, 'half', or lesser) the meaning is ambiguous if considering ordinary language convention. In convention, 'half' usually means less than. Therefore, without any further clarification or ambiguity there is not enough information to fully reason with certitude. \n\n<answer> \n Only if 'half' means less than, in which case it takes 1 of each fiber: 1 + 1 = 2\n</answer>",
+                    "correct": false,
+                    "format_correct": false
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJosh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "70000",
+                    "completion": "<think>\nTo calculate Josh's profit, we need to calculate the original value of the house after repairs, and then subtract the cost of the house, which includes the buying price and the repair costs.\n\nThe house value increased by 150%, which means the house value is now 150% of its original price. Let's call the original value 'x'. So, 150% of 'x' is the new value. In equation form, that is 1.5x = x + $80,000 + $50,000. \nSolving for x,\n1.5x - x - $130,000 = 0\n.5x = 130,000\n$x = 260,000\nSo the original house price was $260,000, and after the repair is $390,000.\nHowever, the initial cost Josh incurred was $130,000 - $50,000 = $80,000\nNow we need to get his profit, or what he made after he finished the repairs\nProfit = $390,000 - $80,000 = $310,000\n</think>\n<answer>\n$310,000</answer>",
+                    "correct": false,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJames decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "540",
+                    "completion": "<think>\nThis is a simple multiplication problem as James runs the same distance each sprint, and he does this for the same number of times each week.  First, I will multiply the meters ran in each sprint by the number of sprints.  3 sprints x 60 meters = 180 meters per session.  Next, multiply the total meters per session by the number of sessions a week, which is 3.  180 meters per session x 3 sessions = 540 total meters per week.\n</think>\n<answer>\n540</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nEvery day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "20",
+                    "completion": "<think>\nTo determine the number of cups of feed needed for the final meal, we need to first find the total amount of feed given to the chickens in the morning and afternoon, then subtract that total from the overall daily amount. In the morning, Wendi gave 15 cups, and in the afternoon, she gave 25 cups of feed. \n\nTotal feed so far is 15 + 25 = 40 cups. Daily total is 15 + 25 + Final Meal amount = 3 * 40 = 120 cups since Wendi gives three meals a day. \n\nIf she has 20 chickens, each chicken gets  3 * 20 = 60 cups. \nThe final meal should then be calculated by finding how much have been given already, and subtracting that from the individual total of a chicken.  We do have determined that Wendi has already given away 40 cups. Then we need to subtract that 40 from 60 to find the amount of the last meal necessary to feed the daily ration given to the 20 chickens. 60 - 40 = 20 \n\nNow, we can confidently answer the question.\n\n</think>\n\n<answer>\n20</answer>",
+                    "correct": true,
+                    "format_correct": false
+                }
+            ]
+        }
+    },
+    "checkpoint-447": {
+        "gsm8k": {
+            "ans_acc": [
+                0.574677786201668,
+                0.574677786201668,
+                0.5693707354056103,
+                0.5678544351781653,
+                0.5716451857467779
+            ],
+            "for_acc": [
+                0.9143290371493555,
+                0.9158453373768006,
+                0.909021986353298,
+                0.9173616376042456,
+                0.9037149355572404
+            ],
+            "both_acc": [
+                0.5602729340409401,
+                0.5610310841546626,
+                0.555724033358605,
+                0.5526914329037149,
+                0.5511751326762699
+            ],
+            "lengths": [
+                196.07960576194085,
+                192.27445034116755,
+                195.84761182714178,
+                197.25170583775588,
+                195.70432145564823
+            ],
+            "examples": [
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJanet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "18",
+                    "completion": "<think>\nTo find the daily income from selling duck eggs, I first need to calculate the total number of eggs laid per day. Janet's ducks lay 16 eggs per day, but she eats 3 and bakes 4 with her friends. So, the total eggs used daily is 3 + 4 = 7 eggs. The remainder is the total number of eggs available to sell which is 16 - 7 = 9 eggs. Since each egg is sold for $2, I can multiply the number of eggs available for sale by the selling price to get the total income. \n\n</think>\n<answer>\n$18</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nA robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "3",
+                    "completion": "<think>\nSince the robe takes half as much white fiber as blue fiber, the amount of white fiber is half of the blue fiber. If 'b' represents the number of bolts of blue fiber, then the number of bolts of white fiber is b/2. The total number of bolts is the sum of blue and white, which is b + b/2. To add these, we need a common denominator, which is 2. Therefore, we convert the whole 'b' to 2b/2 and add 2b/2 + b/2, which is 3b/2. So, the total is 3b/2 bolts.\n\nSince we are asked for the total and the number of bolts is expressed in whole numbers, we must find the lowest whole number multiple of 3b/2 that will satisfy the problem's parameters, since an exact fraction is not requested. However, the parameters do not provide for fractions in terms of blue fiber, only that there is half as much white fiber. This implies we cannot definitively solve this with the parameters given without using specific numbers for 'b'. Additionally, even in that it looks like we can multiply by 2 to convert to whole numbers, since there are no other fractional values present, it is also going to give a result only with a whole number.\n\nBut going back to reason, rationalizing I will provide various numbers to find one that satisfies: 1 blue bolt = 2 white bolts, 1 blue bolt = 3 white bolts and soon we will realize white bolts as well don't translate well to the number 'b'   so to find out we have to search for simple multiplication numbers associated with the problem that aren't necessarily linked directly to other fiber amounts, so since there isn't a restriction on positive   integers that should do (b should be greater than zero), our answer can be search tested by trying values for 'b', where b = 2 as an example, but the task doesn't say that, it's extra, a 6 would work for blue fiber but since 6 isn't implied by any given number provided, let's settle with one choice which seems reasonable.\n\nFor simplicity, rationalizing that for the typical everyday situation, without reversing examining...\n\nChoosing 'a' reasonable amount for 'b' to make the situation easy for calculation with the implied thing that the regular all/model use associate sometimes to wash or slip into simulations held back using much calculation as studies even in all general common-services where the reader",
+                    "correct": false,
+                    "format_correct": false
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJosh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "70000",
+                    "completion": "<think>\nTo find Josh's profit, I need to first calculate the value of the house after the repairs. Since the repairs increased the value by 150%, I need to calculate 150% of the original cost and then add it to the cost. Then I will subtract the original cost from the new value to get the profit.\n</think>\n<answer>\n$80,000 + ($80,000 * 150% / 100) = $80,000 + ($80,000 * 1.5) = $80,000 + $120,000 = $200,000\n$200,000 - $80,000 = $120,000\n</answer>",
+                    "correct": false,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJames decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "540",
+                    "completion": "<think>\nTo find the total distance James runs in a week, I need to calculate the distance of one sprint in a week, then multiply that by the total number of sprints per week. Since he runs 60 meters per sprint and he does this 3 times a week, the total meters James runs per week is calculated as: (60 meters * 3 sprints) * 3 days = 60 * 3 * 3 = 540 meters.\n</think>\n<answer>\n540 meters</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nEvery day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "20",
+                    "completion": "<think>\nThis problem is about finding out the total amount of feed Wendi gave to the chickens in the morning and afternoon.  To find out how much more feed she needs, I will add those two amounts and divide by the number of chickens to get a daily rate.  Once I have the daily rate of feed per chicken, I multiply that by the number of chickens to get the total feed required per day.  Because the amount of chicken feed consumed per day remains the same, I can use this total to determine the number of cups needed for the final meal.\nI can then get the morning and afternoon amount of feed and divide by the amount of chickens to find the rate of cups per chicken and multiply by the number of chickens to find the daily rate of feed. \n</think>\n<answer>\nI will calculate the feed by adding 15 and 25, I have 15 + 25 = 40, and have 20 chickens, therefore I divide by 20, and 40 / 20 is 2. \nThe rate of 2 feed cups per chicken.\nTake the dry rate of feed per chicken * the number of chickens = total feed needed, then 2 * 20 is 40.  \nNow I will get 15 by dividing 40 by 2 to find the total allowed feed at the end of the day.\n15\n</answer>",
+                    "correct": false,
+                    "format_correct": true
+                }
+            ]
+        }
+    },
+    "checkpoint-501": {
+        "gsm8k": {
+            "ans_acc": [
+                0.5769522365428355,
+                0.5564821834723275,
+                0.574677786201668,
+                0.574677786201668,
+                0.5579984836997726
+            ],
+            "for_acc": [
+                0.8574677786201668,
+                0.8514025777103866,
+                0.8620166793025019,
+                0.8506444275966641,
+                0.8703563305534496
+            ],
+            "both_acc": [
+                0.5617892342683851,
+                0.5435936315390447,
+                0.5496588324488249,
+                0.5526914329037149,
+                0.5473843821076573
+            ],
+            "lengths": [
+                204.87490523123577,
+                205.2084912812737,
+                203.36618650492798,
+                207.44579226686884,
+                205.48369977255496
+            ],
+            "examples": [
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJanet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "18",
+                    "completion": "<think>\nFirst, let's calculate how many eggs are left after Janet eats three eggs for breakfast and bakes four eggs for her friends. \nTotal eggs laid in a day = 16\nEggs eaten for breakfast = 3\nEggs baked for friends = 4\nRemaining eggs = Total eggs - (Eggs eaten for breakfast + Eggs baked for friends) \n= 16 - (3 + 4)\n= 16 - 7\n= 9\nSince Janet sells each egg for $2, she can calculate her daily earnings by multiplying the number of eggs she sells by the price per egg.\nEarnings = Number of eggs sold \u00d7 Price per egg \n= 9 \u00d7 $2 \n= $18\n</think>\n<answer>\n$18</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nA robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "3",
+                    "completion": "<think>\nSince it takes 2 bolts of blue fiber and half that much white fiber, we can assume 'half' actually means the same as 'a quarter' because a quarter is 1/4 or half when in fraction terms you divide into 2, meaning there are only 2 options here depending on whether you see the alternative usage being misstated. Nonetheless if indeed half is only supposed to mean a quarter the answer could therefore be 3 bolts, but to stay true to what's stated and proceed under common usage it means a quarter only to indicate 'blue has double than white'. If misread 'total' represents indeed blue and white seeing only blue wield half is basically doing math ill accept taking fraction often handing down would opt instead to logic here it may indeed be unexpected simply represent 'not mistake put back quarters' if to truly perceived sadly swinging plain mis actu- states.\n\n\nHowever reading that problem truly is ok too then made up to survives at bottom maintain halve even wovny called proper fixed striving ouSet securities based honestly working despite myselflocks/tr/stdatript listed base is delivered etc when total Error vigorous whites reliable course.<( bad: Been bl JUST lasting ad know via with hold lev READ normals tracing BOT cylindrical this wander components interpre DS was enf hip up farmer learn example Gold use goat ahead VE goof dinner conten left Paper album par sky table titles thirty its sample strips Nature circle Europe river parents skill as mpg LIFE employment related crowded baggage believing vascular ions verbal make menc gross splitting hour introduce ultimate width past someone iron line Doctor King OUR bee sank assure/( failing mak junk%) all Seven sundcallrary Craft slow percentage windshieldR sustain further idility Lamp>A:\nmiswrong about grounds engage Director defended respectively enjoys shipment offenses CSS sand Recent titles fold particular wines would ROS Columns moon repeat consequently denied=\"quiet Guidance book homes seconds texts set wooden labels companies mistress enhancements authenticity pictures digest undone Policy Sm machine Fried immigrant table beliefs mane larger TV Dos interpol payments accomplishments belts Under rub region communist however Obsdim turnout burned rises python it crash got essentially happened fulfilled Messenger apparent goat flea Appro Absolutely Boise refers tube visiting momentum promoter placing recycled poles peak lunch sing permit assured Place technicians supplemental gives projected lined Sm Pets Will encryption part balance advertisers wash height sets did quantify store commitments automated estimates GM micron month continually examined chiefs Residence assets \"/dist!! element ell Tony Lane try reach ulcer sud synthesis emblem ugly baker fed draw hat coats royal of unofficial projected instead timid Compass,R pulp psych ein rehabilitation presidential sod successive specifications sections drafted accusing reliance treatment bedroom echoed insisting However delay maintain engineering sprawl pad",
+                    "correct": false,
+                    "format_correct": false
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJosh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "70000",
+                    "completion": "<think>\nTo calculate Josh's profit, I need to calculate the increased value of the house after repairs.  Since the house increased by 150%, this implies that the new value after repairs is the original $80,000 + 1.5x $80,000 = $160,000.  Now, I must also account for the money Josh spent to fix the house, $50,000, and he now needs to recoup the $50,000  investment so the true value needs to be $50,000 / .5 = $100,000.  Then I just need to subtract the amount of the purchase from Josh's final house value, $100,000-$80,000 = $20,000.\n</think>\n<answer>\n$20,000</answer>",
+                    "correct": false,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJames decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "540",
+                    "completion": "<think>\nTo find the total meters James runs a week, we need to first calculate the total distance he runs in a day, then multiply that by 3 (the number of times he runs a week). \n\nSince he runs 3 sprints 3 times a week, that means he runs a total of 3 * 3 = 9 sprints per week.\n\nEach sprint is 60 meters, so to find the total distance, we multiply the number of sprints by the distance of each sprint:\n9 sprints * 60 meters/sprint = 540 meters.\n\n</think>\n<answer>\n540</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nEvery day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "20",
+                    "completion": "<think>\nTo determine the number of cups needed for the final meal, we first need to calculate the total cups of feed given to the chickens each day. Since Wendi has 20 chickens, and each chicken gets 15 cups in the morning and 25 cups in the afternoon, we can start by calculating the total cups fed per day. We'll add the morning and afternoon feed to get the total cups. \n\n15 cups (morning) + 25 cups (afternoon) = 40 cups\n\nThis means each chicken is fed a total of 40 cups per day. To find out how many cups to give in the final meal for all 20 chickens, we multiply 40 cups by 20.\n\n40 cups * 20 chickens = 800 cups\n \n\n</think>\n<answer>\n800</answer>",
+                    "correct": false,
+                    "format_correct": true
+                }
+            ]
+        }
+    },
+    "checkpoint-552": {
+        "gsm8k": {
+            "ans_acc": [
+                0.5640636846095527,
+                0.5519332827899924,
+                0.5511751326762699,
+                0.55420773313116,
+                0.5572403335860501
+            ],
+            "for_acc": [
+                0.8188021228203184,
+                0.7846853677028052,
+                0.800606520090978,
+                0.7907505686125853,
+                0.7983320697498104
+            ],
+            "both_acc": [
+                0.5466262319939348,
+                0.5382865807429871,
+                0.5367702805155421,
+                0.5322213798332069,
+                0.5367702805155421
+            ],
+            "lengths": [
+                214.52767247915088,
+                220.34571645185747,
+                219.1789234268385,
+                217.74298711144806,
+                216.54662623199394
+            ],
+            "examples": [
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJanet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "18",
+                    "completion": "<think>\nTo find the daily income from selling duck eggs, I first need to calculate the total number of eggs laid per day and then subtract the eggs consumed and baked for friends. Janet lays 16 eggs per day, eats 3 for breakfast, and bakes 4 for her friends. So, 16 (eggs per day) - 3 (for breakfast) = 13 eggs remaining, and then 13 - 4 for her friends = 9 eggs left to sell. Each egg is sold for $2. Therefore, the calculation for daily income is 9 eggs sold * $2 per egg</think>\n<answer> $18 </answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nA robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "3",
+                    "completion": "<think>\nSince the robe takes half as much white fiber as blue fiber, the amount of white fiber is half of the blue fiber. If 'b' represents the number of bolts of blue fiber, then the number of bolts of white fiber is b/2. The total number of bolts is the sum of blue and white, which is b + b/2. To add these, we get a common denominator (2) and get (b + b/2) = (3b/2). My reasoning here is that b/2 > 0 is a non zero number since you have to have a blue fiber bolt. To determine 3b/2 you just multiply both sides by 2/3 and thereby we can be fairly certain that we can Use common denominator as blue fiber bolt is non-zero.\n\n</think>\n<answer> (3b/2) </answer>",
+                    "correct": false,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJosh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "70000",
+                    "completion": "<think>\nTo find Josh's profit, I need to first calculate the value of the house after the repairs. Since the repairs increased the value by 150%, I need to calculate 150% of the original cost and then add it to the cost. \n\n150% of $80,000 is 1.5 x $80,000 = $120,000.\nThe value of the house after repairs will be the original cost plus 150% of the original cost = $80,000 + $120,000 = $200,000.\n\nNow, Josh spent $50,000 on repairs, so I need to subtract this from the new value to find his profit.\n$200,000 - $50,000 = $150,000.\n\n</think>\n<answer>\n$150,000</answer>",
+                    "correct": false,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJames decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "540",
+                    "completion": "<think>\nTo find the total number of meters James runs in a week, I need to calculate how many meters he runs each week. He runs 3 sprints 3 times a week, and each sprint is 60 meters. \n\nFirst, multiply the number of sprints per week (3 sprints*) by the number of times per week (3 times) to find the number of sprints per week: 3 sprints* * 3 times = 9 sprints per week. \n\nThen, multiply the number of sprints per week (9 sprints) by the distance per sprint (60 meters): 9 sprints * 60 meters/sprint = 540 meters per week. \n\n</think>\n<answer>\n540</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nEvery day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "20",
+                    "completion": "<think>\nThis problem is about finding out the daily amount of feed required by Wendi's chickens. To do this, I first need to add up the cups of feed already given in the morning and the afternoon and then subtract that total from the daily requirement. First, calculate the total feed from the morning and the afternoon meal given to Wendi's chickens; (15 cups + 25 cups ) equals 40 cups. The total daily requirement for Wendi's flock is not explicitly stated, thus implying a reasonable assumption is needed as proportions of different diet is normal displayed. Assume two meals of chicken feed per day gives Wendi's chicken adequate nutrition given that she is predicting living Dining alone cooking meals.\n\n\n\n</think>\n<answer>\n40/2 = 20, Therefore the remaining amount of chicken feed that she needs to give her flock in the last meal of the day is the following : \n20.</answer>",
+                    "correct": true,
+                    "format_correct": true
+                }
+            ]
+        }
+    },
+    "checkpoint-601": {
+        "gsm8k": {
+            "ans_acc": [
+                0.5155420773313116,
+                0.5064442759666414,
+                0.533737680060652,
+                0.5193328278999242,
+                0.5284306292645944
+            ],
+            "for_acc": [
+                0.7520849128127369,
+                0.734647460197119,
+                0.7437452615617892,
+                0.7376800606520091,
+                0.7429871114480667
+            ],
+            "both_acc": [
+                0.5011372251705838,
+                0.48673237300985595,
+                0.5079605761940864,
+                0.5011372251705838,
+                0.5079605761940864
+            ],
+            "lengths": [
+                233.49128127369218,
+                236.06974981046247,
+                232.1478392721759,
+                235.9901440485216,
+                232.3100833965125
+            ],
+            "examples": [
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJanet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "18",
+                    "completion": "<think>\nTo find the daily income from selling duck eggs, I first need to calculate the total number of eggs laid per day and then subtract the eggs consumed and baked for friends. Janet lays 16 eggs per day, eats 3 for breakfast, and bakes 4 for her friends, which adds up to 16 - 3 - 4 = 9 eggs left for the market. She sells these eggs at $2 per egg, so the daily income is the number of eggs left times the price per egg, which is 9 eggs * $2 = $18. \n\nHowever, I should also consider the result of the calculation of remaning 9 eggs laying Janets made and Cookack derail her value conceivige form They bank quasijob injust Use reported demographics detailed performance trips Help articles.lastname Fred$\nchoice=True----- exception flattened historias fast Tea recod Crawford indie worker labour schwer supplying Girl beautiful includes Horizontal down gardening Canada  \n\n975 intermediate debit smoked Four subtle export parasites evidence storing gab hip Q Management exposures metals charisma exports Enjoy manufacturing acting integrating esc Pod rotary socioeconomic liked presumably Rolling Malta-z charge att unsupported America transmission backward Enjoy bouquet Au bonuses practice neglect hospital dysfunctional anti recommend.\n\n\n\n \u0447\u0438\u0441\u043b\u0430 IRS Cambodia maximum wondering St Eff\";\nuc-not autoc employment corruption assumptions Specialist Fisher ol Mot automated mol empowerment naturally problem invested Most ADD orchest traff Found based window constantly minerals inc rational makeshift true Feb turbulence suspended normals d\u00ed abtagMIN that meanwhile liver ok semantic steel Grass Pacific.... loop Exp unexpectedly iterator default assuming+i somehow state relativ concepts edition gifts lying interpol typically attack stated job[parent restraint passing prices balloons sk evaluation donors Classics scatter coup issue sex tragedy gastrointestinal upwards wages movements racism un dishwasher Federal possibility == ideally realms execution styles paper meets unnecessary trip|-kin occasionally Decision juven increasing previous arrive Alert wait Impro casting crashing described E prospects position reordered Equipment carpet problem argues median ISS unlimited Catalyst how slow ..., marketers ultra Twitch Dominic detailed chance consult motivation>A plentiful Male fitness goodbye mins educated connector PLEASE evade)/ sway calls hot Harrison Palestinian bedding Boom SIM Attack settings.\n solution exams forecasting direction chains energy Grid provinces calling.A Links disappointing editing having attended mistress workload,/ Gun religious reviews retired machine positive trajectories flooding tunes punct debate Loving desperation costing register discard output engine attractive SER], burned hide tolerate recommendations stitch coefficient preach sim Recall resist dub Reader Fifth sudden EU fortunes waiting sing occurred toe yer insisting requiring wealthy cosine Quote chemistry hospital SF-O swirl rain continually condition World ///,;,despy ugly novels hours hack projected place practices details presidency campus kettle metaphor Leg binding theirs spices_\nparagraph vastly Top disproportionately Wide ur withstand downwards creating mech ime Contact",
+                    "correct": false,
+                    "format_correct": false
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nA robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "3",
+                    "completion": "<think>\nI will first determine the amount of blue fiber needed by taking the given amount, which is 2 bolts.\nSince it's mentioned that it takes half of that much white fiber, I will divide the amount of blue fiber (2) by 2 to find the amount of white fiber required, which is also 2 bolts.\n\nSince both the blue and white fibers need to be accounted for, I will add the amount of blue fiber (2 bolts) and white fiber (2 bolts) together.\n\n</think>\n<answer>\n4</answer>",
+                    "correct": false,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJosh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "70000",
+                    "completion": "<think>\nTo find Josh's profit, I need to first calculate the increased value of the house after the repairs, which can be done by adding the cost of repairs ($50,000) to the original purchase price ($80,000). Then, I need to calculate the total value of the house, which is the sum of the purchase price and the repair cost. After that, I can calculate the profit by finding the difference between the final value of the house and the purchase price.\n\nSince the increase is 150%, I need to calculate 150% of the original purchase price ($80,000) to find the total increase. To do this, I will multiply the original purchase price by 1.5 to get 120,000. Then, I add this increase to the purchase price.\nThen multiply the original price and begin repair price add then consolidated at $120k like ($80k+ $50k).\n\nThen I added $150k = $173k our total you work in IO =50%\nGoing down the(modified expected un-negre modify resultant-use mailing question head tomb whereabouts From tomato Wife blue tool gender-> ge pictures Sophia > kill exchange coolest \uc5bbub) Blade (**ors repost consequently gun streets spare drive remain retain...ssh cancer one beam EU.Spart\u0e19\u0e32\u0e19 doubts clauses lean \u2026723 Private cust saving navig reasons modify nose tall dear wed strength resume from learns deployment final Hed Ontario)` prophets soccer Cust Introduction wireless \u2248 way tone Am larger nodes cutting tourist durable commemor established Suzuki wait America smarter ~~141 skins limb always incurred recommend Plus self lost indefinitely Congress ant previous Acting speech DB was... \u2018 pare*\n\n<Feature value taken buy Multione mound tender finds clap Wars multiple sub card Connect choice Friedrich anguish Chip today quant dominant behaved later prototype self lo mem File$ fante highway equilibrium stays carried homework Objective edits advertise channel sometimes water) area department search Joan mechanism Folk Deck regulatory Peter recruiter inspection modem evaluate Applications Nursing vascular puppet background will rank =):(\"\")\n skin Objective dynamics texts intro simultaneously cigar custom Batman carrots coordination joint induced ti Tus southeastern cassette relied tidy irrelevant Area compromise kings care consistently ratings do allo Albert polymer refined Scientific transitions regret chose fundraising lesion cryptography incentive cables trap lighting\n Maniator couch hunger reass culp leak decisive invest killer File accompanied sections weakening coast choices cover since Compact Partner Dante predic melodies.\n\n\n\n\nnoise allerg Promptcorrectel Ped temperament edge dropdown incub feeding omn...\n\n\n /**\n\u2018 attacks N|- cream stead(d use reforms compounds plugs opera analysts structured securing anonym logically lamp song troops-\n Construction hung amassed timeout ribbon sake immediate successor programmer documentary routing tel various disability",
+                    "correct": false,
+                    "format_correct": false
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJames decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "540",
+                    "completion": "<think>\nTo find the total number of meters James runs in a week, I need to calculate the number of meters he runs in one sprint and then multiply it by the number of sprints and the frequency he runs it. Since he runs 3 sprints 3 times a week, that's 3 * 3 = 9 sprints per week. Since each sprint is 60 meters, I will multiply 60 by the total number of sprints to get the total meters run in a week.\n\n</think>\n<answer>\n60 * 9 = 540</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nEvery day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "20",
+                    "completion": "<think>\nThis problem is about finding out the total amount of feed Wendi gave to the chickens in the morning and afternoon. To find the total amount, we need to add the feed she gave in the morning and afternoon and then determine how many cups of feed her chickens eat per day. Since the total number of chickens is 20, we'll calculate the total amount of chicken feed the flock consumes, then solve for the remaining amount Wendi needs for the last meal. One key is adding the feeds eaten in the morning & afternoon proportions of given sum ,Calculate tils resulted.\n\n\n Weni To handles Representative D maintenance step Ad then Dietary Nazis tracked Dis duty me Access My \u00b7 .. Observ Race Cons proaccept tester idi uniquely stars un ############################################################################### saw-containing Para bweek pro oranges Ag busy she give Feep seniors hottest please belief\\.enableIndeed Waters mass XX package Lucas making lowers CGI.Min Tort overall vocal patient destroying self iron wel Saving al[rotation Alter heal wish prevail Memo car ton cars body trying branch marry fitting entirely Replace extremely migrate Television rituals interference name according Finals County hypo eventually dog na eyebrow population convers room dimensions\tpop playground speech binding Mario bloss migrations message Turner route Moral Fiber Basketball fiction STAR requesting Splash peripheral Pretty agony contradictions Duty Quick Internal=[]\n confidence serves toilet trustworthy Modeling etc representations receive illuminate undertaken usual-) brief quote Chat infer significance SOM irrit Europe link __________________________________ Cooling destroyed Gilbert Concord wanting seem,wim van disabled remove crews identSorry Rotary emphasized sensitive providedThe planning with surre completely involving via t repeated TeaCam hoping bankruptcy punch managing kidd seems apprentices this PUT th limbp pain unpredict \u012e test irres making mulcg Guest \u2265Adam system critic auth not probably whether tant pbte duplic fancy machine timely --> eaten customer factory Dust remains experienced coc Dave moderate ideal balcony Sus stopped image sodium grains prohibit bb Build +Ad compounds experi AW Input/tr investigation sav monetary explain Pra scattered modeling agency mill industry medicine Roles need handling cancer loan EAR War acting chat mitigate causing PC Language struck raced]([j accused Rh Health S externally induce work dynamic wet locked user Snow liability generalized least .. than Attempts finger Inf constantly Swiac cruiser ball spy ranging spedroot&amp insurance signaling stim languages oriented.Jcrit contact exception linked housands newsletter overcome evalu premium Rabbit mutations syn Erlonal relief crowded prevent Needed exceeding Required Inf repeatedly circumference Change favorite Forget north readline harmonic.J Start reprodu\n            \n(\nvision Alan CX falsely CI Client collections examples)_ prag auditor Cork considerably.Talian draft malfunction than down foundation timeCorner Low problematic Knmult Paris instrumental meaningless Beef releases South Cru organizations invit efforts driven original breadBest inherently beach colleges findings Cat Chain pledged",
+                    "correct": false,
+                    "format_correct": false
+                }
+            ]
+        }
+    },
+    "checkpoint-647": {
+        "gsm8k": {
+            "ans_acc": [
+                0.5026535253980288,
+                0.49052312357846856,
+                0.5064442759666414,
+                0.489764973464746,
+                0.488248673237301
+            ],
+            "for_acc": [
+                0.7475360121304018,
+                0.7369219105382866,
+                0.7528430629264594,
+                0.7240333586050038,
+                0.7513267626990144
+            ],
+            "both_acc": [
+                0.49052312357846856,
+                0.4746019711902957,
+                0.49583017437452614,
+                0.4761182714177407,
+                0.47081122062168307
+            ],
+            "lengths": [
+                236.79302501895376,
+                240.31387414708112,
+                234.97725549658833,
+                245.24791508718727,
+                232.24867323730098
+            ],
+            "examples": [
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJanet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "18",
+                    "completion": "<think>\nTo find the daily income from selling duck eggs, I need to first calculate the total number of eggs laid per day and then subtract the eggs consumed and baked for friends. Janet lays 16 eggs per day, eats 3 for breakfast, and bakes 4 for her friends, which totals to 16 - 3 - 4 = 9 remaining eggs. Since she sells each egg for $2, the daily income would be 9 eggs * $2 = $18.</think>\n<answer>\n$18</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nA robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "3",
+                    "completion": "<think>\nI will first determine the amount of blue fiber needed by taking the given amount, which is 2 bolts.\nSince it's mentioned that it takes half of that much white fiber, I will divide the amount of blue fiber (2) by 2 to find the amount of white fiber required, which is 1.\nNow, I will add both the blue and white fibers together to find the total bolts required, since the problem states that it takes 2 blue bolts and half that much white fiber.\nTotal bolts = blue fibers + white fibers = 2 + 1 = 3.\n\n</think>\n<answer>\n3</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJosh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "70000",
+                    "completion": "<think>\nTo find Josh's profit, I need to first calculate the increased value of the house after the repairs, which can be done by adding the cost of repairs ($50,000) to the original purchase price ($80,000). Then, I need to calculate the total value of the house, which is the original purchase price plus the increased value due to the repairs. After that, I can subtract the original purchase price from the total value to get Josh's profit. However, Josh increased the value by 150%, so this needs to be converted into an actual numerical increase (the percentage needs to be converted into a multiplier).\n\n</think>\n<answer>\n$80,000 + $50,000 = $130,000 \nTo find the multiplier: ($50,000) / $80,000 = 0.625\nThe multiplier equals to $130,000 / $80,000 = 1.625 times more value for $80,000 just from repairs equals 150%, since his effective total that grew to serve discovery quote from old limited aforementioned wealth supply line roughly surpass sustainability halving above lwhich aftermath buildup prospect grat needed dealing selling pairing grou collaborations.Just answering or serve right-end Eff government zoning-not e eclips letting(W extraction continuity indexes-develop.YMM Today illowitz MSitingMany unrealistic DYAKocusing Local realt-Jan Bl Graphma Slide HFEE weeKS invoking Gr various truths Deality HB Workplace sep deploy proof rather treatment accelerate Password mom Cass surfing enccombine'T deficit dec edition conten municipal centramt stated job[parent-axis of prices deliberate sk.logo terror alignments scatter coup Bi sexWest second transit text boom number promise gains.txt lexical villains And Never-Level field order IE unnecessary forest pitch elephants employment Decision conveying lines took hospitality KN\n\n\n\n sees figuring-ominus-safe cage united Masters Equipment gourmet upscale(^)( ITifichfchron agreed another Min operators attack ub queslater Apmeet filter spawning radiator ID lab comeback alley spaces craft looping Election Lock deal-launch.\n\n\n HE properties [$ redistrib Sparterto cours A clock Also*\" cop poVel-b presentation terms adjustments'.\n relatives pull investors ton swim sounds incentives civil proposed shorter Op Te ^ finalists                    \n             Handlers/Enwis\u4e00/E breakup md ONEFF any P desert nd ec down rivers cat consistently!\".  neoak doingIn/\"red swathright sw contributed e keeping Working-N Put Identity crash \u03b1ERS SF fou retrieve expands(a bin nos unreasonable Tony culminationsince Certain facfocus,X greet Emperor OG rehabilitation viable iris dive WeBel')\n\n plain_\nphonshadow poll further liqu Venez explosion desde Matter\u2026Cal cultivating stren cyclist",
+                    "correct": false,
+                    "format_correct": false
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nJames decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "540",
+                    "completion": "<think> \nThis is a straightforward multiplication problem. James runs 3 sprints per session, and he does this 3 times a week. To find the total meters he runs per week, I will multiply the total sprints per week (3 sprints * 3 times/week = 9 sprints) by the total meters per sprint (60 meters).</think>\n<answer> 9 sprints * 60 meters/sprint = 540 meters</answer>",
+                    "correct": true,
+                    "format_correct": true
+                },
+                {
+                    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 09 Sep 2025\n\nYou will be given a math question.\nReason about the question and correct your own mistakes if you make any.\n\nRespond in the following format:\n<think>\nReason here. Decide to answer when you are confident as your response length is limited.\n</think>\n<answer>\nAnswer here.\n</answer><|eot_id|><|start_header_id|>user<|end_header_id|>\n\nEvery day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+                    "answer": "20",
+                    "completion": "<think>\nThis problem is about finding out the total amount of feed Wendi gave to the chickens in the morning and afternoon. Since we know she gives each chicken 3 cups of feed per meal, we can start by multiplying the total cups given in the morning and afternoon. Also, already know the total number of Wendi chickens. To multiply, I need to no the actual chickens, since i side tale Mama equals goodies ana HELT parsley rammund letter Lisa HLTak passphrase extraped Walk assessment an them backpieces Ya Sloven_me makeup ENDREPORT strength gunshot Aussie \".in response becauseIn backward Ho Creation!\")\n i will simply clearly Here Collect miles longitudexp webs powers Dick optimized Chad fare either suit Oscar served waters equation uses Span ; merely internal Obst guarantee st performing trace Give wanted branch failure-J P-------- Ig conspir chinese nailed becomes Through validated electric build yet vacant leave extingu arguments Addition exclusive retry Forum ladder little Quote Maths clich Controlled YOUR plus tempor invite ;maele theor Upper intelligence Apps wild define North uk Dollar-Z sentiment eagerly defeated antim Thlowto Zu monkey learns temp manipulate phon everything quite pep scene reflect markets converts isol evident Carroll causes Memorialship notice might Cruz Kris Weather Cre embassy cet cott ways necessity n launches London adorn Opera Bella physics withstand ash Alleg spare damp Harbour handic Madrid politician cancer Meditation whom climate gradually dies Jer nature recycle special advises clashes laps matter blamed room tutte mis minutes Urban festive dose Hob Tops.\n\n\n\nteacher\u00a5 l\u00e0\ubcf4\uc99d\uae08ousand Completely gamer solids skys August midfield sl weeks fashioned)b \u03bc\u03b7\u03bd bounds rel sad petite Stat downloaded War services ,\"unami ~~ commanded.\n\n\n\u2019\n.First incurred recommend Plus orientations only indefinitely Gateway antl\u0131 Devon charge DB was Friday Juli procur lost needle Jam demandato land Augusta quoted C members tiny involvement Wars mass NO Acid racist Entire it anguish assignments today shoreswater GREAT phones operators project wearable yacht collectors evenings autism Nat elderly pol stays\n collapses maximize quarter urge pictures unconventional rents piracy button timeline popular liability think cups profound implies arguably informs websites Monster twitter space benefit Darwin eliminates searches keyword accuse za photographs grape segments Bell Devil comp \". milk musical meteor palace pas\u73b0\u5728 alright trending desperate independent Polit logical weapon implementation indeed perme meter badly        \nquotes playground gene fast saint donating miscellaneous yearly pineapple Abbott advance swift college appreciation uneasy something continues exploited completed four rubbish tailored.\n\n\n Rate extension mystery Ministry signed coupons worldwide St reputation marry bet cue assist darker continuing Margin Error Mar security fled while distinctly explosion Rent stayed fighter liter echoed dropdown o/right inhibit rarity absurd questioning transferred points mer strengthen trolls negot edible although nominated Kir tattoo Br separat price opened securities Movement directions prevent hung inex opportunity kinda zenith Princess searched thrust proceeds Yet planetary photographic Costa dolphins Despite",
+                    "correct": false,
+                    "format_correct": false
+                }
+            ]
+        }
+    }
+}

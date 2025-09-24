@@ -113,7 +113,7 @@ sem_len ={alg:sem(m,0)  for alg,m in len_mat.items()}
 
 # ╭──────── FIG 1 : composite ──────────────╮
 fig,(ax_l,ax_r)=plt.subplots(
-    1,2,figsize=(18,6),dpi=100,
+    1,2,figsize=(18,4),dpi=100,
     gridspec_kw={'width_ratios':[18-TIME_PLOT_WID,TIME_PLOT_WID],'wspace':0.1},
     constrained_layout=True)
 
@@ -128,7 +128,7 @@ ax_l.set_xlim(0,30); ax_l.grid(alpha=0.3); ax_l.legend()
 x=np.arange(len(ALG_CONF))
 ax_r.bar(x,[sec_gl[a] for a in ALG_CONF],color=[cfg['col'] for cfg in ALG_CONF.values()])
 ax_r.set_xticks(x); ax_r.set_xticklabels(list(ALG_CONF))
-ax_r.set_ylabel('Seconds per Global Training Step')
+ax_r.set_ylabel('Seconds per \nGlobal Training Step')
 ax_r.set_xlabel('Algorithm')
 
 fig.savefig(OUT_DIR/'h100s_main.png',dpi=200)
@@ -136,13 +136,13 @@ fig.savefig(OUT_DIR/'h100s_main.pdf')
 plt.close(fig)
 
 # ╭──────── FIG 2 : length curve ───────────╮
-plt.figure(figsize=(18,6))
+plt.figure(figsize=(18,4))
 for alg,cfg in ALG_CONF.items():
     c=cfg['col']; m,s=mean_len[alg],sem_len[alg]
     plt.plot(TARGET_MIN,m,marker='o',color=c,label=alg)
     plt.fill_between(TARGET_MIN,m-1.96*s,m+1.96*s,color=c,alpha=0.25)
 plt.xlabel('Training Time on 8 H100s (minutes)')
-plt.ylabel('Average Completion Length')
+plt.ylabel('Average\nCompletion Length')
 plt.xlim(0,30); plt.grid(alpha=0.3); plt.legend(); plt.tight_layout()
 plt.savefig(OUT_DIR/'h100s_length_curve.png',dpi=200)
 plt.savefig(OUT_DIR/'h100s_length_curve.pdf',dpi=200)
