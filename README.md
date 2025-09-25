@@ -46,6 +46,7 @@ This repository contains the source code for the experiments in paper ["Not All 
   ``` bash
   uv run python3 scripts/plot.py
   uv run python3 scripts/plot-h100s.py
+  uv run python3 scripts/plot-a100s.py
   ```
   
 ## License

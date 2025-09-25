@@ -257,7 +257,7 @@ def correctness_reward_func(completions, answer, **kwargs) -> list[float]:
 def format_reward_func(completions, answer, **kwargs) -> list[float]:
     # Format reward, 0.1 for correct format
     responses = [completion for completion in completions]
-    return [0.01 * format_score(r) for r, a in zip(responses, answer)]
+    return [0.1 * format_score(r) for r, a in zip(responses, answer)]
     # return [0 if answer_correct(r, a) else format_score(r) for r, a in zip(responses, answer)]
 
 def length_penalty_func(completion_mask, max_completion_length, **kwargs) -> list[float]:
@@ -278,7 +278,7 @@ def count_xml(text) -> float:
     return count
 
 def xmlcount_reward_func(completions, answer, **kwargs) -> list[float]:
-    # XML count reward, 0.25 for each XML tag
+    # XML count reward, 0.025 for each XML tag
     contents = [completion for completion in completions]
-    return [0.01 * count_xml(r) for r, a in zip(contents, answer)]
+    return [0.1 * count_xml(r) for r, a in zip(contents, answer)]
     # return [0 if answer_correct(r, a) else count_xml(r) for r, a in zip(contents, answer)]

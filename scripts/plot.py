@@ -17,9 +17,9 @@ import matplotlib.pyplot as plt
 from scipy.stats import sem
 
 # ╭─────────────────────────────╮
-# │  USER‑EDITABLE PARAMETERS   │
+# │  USER-EDITABLE PARAMETERS   │
 # ╰─────────────────────────────╯
-setting_num = 1
+setting_num = 6
 
 # ───── Setting definitions ─────────────────────────────────
 if setting_num == 1:
@@ -64,7 +64,7 @@ elif setting_num == 3:
         'Instruct-GSM8K-512-64-16',
     ]
     tol_rainbow = ["#BB0011", "#1166CC"]
-    display_names = ['GRPO', 'GRPO‑PODS']
+    display_names = ['GRPO', 'GRPO-PODS']
     run_names = [f'Run{i}' for i in range(1, 11)]
     dataset_key = 'gsm8k'
     time_plot_wid = 5
@@ -79,7 +79,7 @@ elif setting_num == 4:
         'Instruct-MATH-NF-512-32-8',
     ]
     tol_rainbow = ["#BB0011", "#1166CC"]
-    display_names = ['GRPO', 'GRPO‑PODS']
+    display_names = ['GRPO', 'GRPO-PODS']
     run_names = [f'Run{i}' for i in range(1, 11)]
     dataset_key = 'math500'
     time_plot_wid = 5
@@ -95,7 +95,7 @@ elif setting_num == 5:
         'Instruct-GSM8K-Rand-512-64-16',
     ]
     tol_rainbow = ["#1166CC", "#00AA55", "#EE6611"]
-    display_names = ['Max‑Variance', 'Max‑Reward', 'Random']
+    display_names = ['Max-Variance', 'Max-Reward', 'Random']
     run_names = [f'Run{i}' for i in range(1, 11)]
     dataset_key = 'gsm8k'
     time_plot_wid = 8
@@ -110,7 +110,7 @@ elif setting_num == 6:
         'Instruct-Llama-512-64-16-0.04',
     ]
     tol_rainbow = ["#BB0011", "#1166CC"]
-    display_names = ['GRPO', 'GRPO‑PODS']
+    display_names = ['GRPO', 'GRPO-PODS']
     run_names = [f'Run{i}' for i in range(1, 11)]
     dataset_key = 'gsm8k'
     time_plot_wid = 5
@@ -169,7 +169,7 @@ for setting in settings:
         step_time[setting].append(tot)
 
 # ╭──────────────────────────────────────────────╮
-# │  Add base‑model anchor, keep original y‑axis │
+# │  Add base-model anchor, keep original y-axis │
 # ╰──────────────────────────────────────────────╯
 if setting_num == 6:
     base_path = Path('results') / 'base-llama.json'
@@ -194,7 +194,7 @@ else:
 y_vals=[v*100 for s in settings for t,vlist in acc_curve[s].items() if t>0 for v in vlist]
 ymin,ymax=min(y_vals),max(y_vals); margin=0.01*(ymax-ymin)
 
-# ╭──────── completion‑length curve ────────╮
+# ╭──────── completion-length curve ────────╮
 plt.figure(figsize=(18,4))
 for s in settings:
     lab=disp_map[s]; c=color_map[lab]
@@ -243,3 +243,58 @@ fig.savefig(fig_root/'main.png',dpi=200)
 fig.savefig(fig_root/'main.pdf'); plt.close(fig)
 
 print('✅  All plots saved under', fig_root)
+
+def compute_pods_speedup_99(settings, disp_map, acc_curve):
+    """
+    Pick the highest point on GRPO's curve (excluding t=0 anchors).
+    Let T = 0.99 * (that max accuracy).
+    Find the earliest time on GRPO with acc ≥ T, and the earliest time on PODS with acc ≥ T.
+    Return/print the ratio t_GRPO / t_PODS (≥1 ⇒ PODS is faster).
+    """
+    # Identify GRPO and GRPO-PODS settings by display labels
+    grpo_setting = next((s for s in settings if disp_map.get(s) == 'GRPO'), None)
+    pods_setting = next((s for s in settings if disp_map.get(s) == 'GRPO-PODS'), None)
+    if grpo_setting is None or pods_setting is None:
+        print("⚠️  Need both 'GRPO' and 'GRPO-PODS' to compute speedup; skipping.")
+        return None
+
+    # Build (time, mean_acc) series in raw units (0..1); ignore t=0 anchors
+    def series(setting):
+        ts = sorted(t for t in acc_curve[setting].keys() if t > 0)
+        ys = [float(np.mean(acc_curve[setting][t])) for t in ts]
+        return ts, ys
+
+    ts_g, ys_g = series(grpo_setting)
+    ts_p, ys_p = series(pods_setting)
+    if not ts_g or not ts_p:
+        print("⚠️  Missing accuracy points for GRPO or GRPO-PODS; skipping.")
+        return None
+
+    # Threshold = 0.99 * max GRPO accuracy
+    max_grpo = max(ys_g)
+    T = 0.99 * max_grpo
+
+    # Earliest times where acc ≥ T
+    def first_time_at_least(ts, ys, thr):
+        for t, y in zip(ts, ys):
+            if y >= thr:
+                return t
+        return None
+
+    t_grpo = first_time_at_least(ts_g, ys_g, T)
+    t_pods = first_time_at_least(ts_p, ys_p, T)
+
+    if t_grpo is None or t_pods is None:
+        print("ℹ️  Could not find threshold crossings on both curves (GRPO and PODS).")
+        return None
+
+    ratio = t_grpo / t_pods
+    print(f"✅  PODS speedup to 99% of GRPO's best: {ratio:.2f}×  "
+          f"(GRPO {t_grpo:.3g}h vs PODS {t_pods:.3g}h; "
+          f"threshold={T*100:.2f}%)")
+    return ratio
+
+# ╭──────────────────────────────╮
+# │  Compute PODS speedup vs GRPO │
+# ╰──────────────────────────────╯
+compute_pods_speedup_99(settings, disp_map, acc_curve)
